@@ -65,6 +65,12 @@ def show_hw():
         print(c)
         return str(c)
 
+@app.route('/show')
+def show_hw():
+        d = db.execute("select * from pole")
+        print(d)
+        return str(d)
+
 
 if __name__ == '__main__':
     app.run(debug=True)
